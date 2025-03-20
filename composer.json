@@ -11,5 +11,6 @@
             "email": "vespasianomatheus@gmail.com"
         }
     ],
+    "license": "MIT",
     "require": {}
 }
