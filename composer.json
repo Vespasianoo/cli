@@ -1,0 +1,15 @@
+{
+    "name": "itnaida/itnaida",
+    "autoload": {
+        "psr-4": {
+            "Itnaida\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "vespasiano",
+            "email": "vespasianomatheus@gmail.com"
+        }
+    ],
+    "require": {}
+}
