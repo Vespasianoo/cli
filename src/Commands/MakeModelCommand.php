@@ -19,10 +19,6 @@ class MakeModelCommand extends Command
                 return;
             }
 
-            
-            print_r($param);
-            echo PHP_EOL;
-            return;
             $data = [];
             $data['className'] = $param[0];
 
@@ -33,9 +29,7 @@ class MakeModelCommand extends Command
             $service = new MakeModelService($data);
             $service->handle();
     
-    
-            
-            
+
             PrintLog::success('Class de modelo criado com sucesso');
         }
         catch(Exception $e) 
