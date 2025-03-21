@@ -1,5 +1,7 @@
 {
     "name": "itnaida/itnaida",
+    "description": "teste",
+    "type": "itnaida",
     "autoload": {
         "psr-4": {
             "Itnaida\\": "src/"
@@ -12,5 +14,6 @@
         }
     ],
     "license": "MIT",
-    "require": {}
+    "require": {},
+    "minimum-stability": "dev"
 }
