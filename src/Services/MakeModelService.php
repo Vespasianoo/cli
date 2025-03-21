@@ -2,6 +2,7 @@
 
 namespace Itnaida\Services;
 
+use Adianti\Database\TTransaction;
 use Exception;
 use PDO;
 
@@ -68,9 +69,13 @@ class MakeModelService
         TTransaction::open('permission');
 
         $conn = TTransaction::get();
-        $conn = $conn->query("PRAGMA table_info(system_user)");
+        $conn = $conn->query("PRAGMA table_info(system_users)");
+
         $columns_tables = $conn->fetchAll(PDO::FETCH_ASSOC);
 
+        if (empty($columns_tables)) {
+            throw new Exception("A tabela 'system_user' não existe no banco de dados.");
+        }
 
         $columns = [];
         foreach ($columns_tables as $column) {
