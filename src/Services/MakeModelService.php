@@ -65,14 +65,11 @@ class MakeModelService
 
     private function getAttributeTable(): array
     {
-        $ini = "./app/config/permission.ini";
-        $config = parse_ini_file($ini);
-        $table = $config['name'];
-        
-        $pdo = new PDO("sqlite:{$table}");
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $pdo->query("PRAGMA table_info(system_user)");
-        $columns_tables = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        TTransaction::open('permission');
+
+        $conn = TTransaction::get();
+        $conn = $conn->query("PRAGMA table_info(system_user)");
+        $columns_tables = $conn->fetchAll(PDO::FETCH_ASSOC);
 
 
         $columns = [];

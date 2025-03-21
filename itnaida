@@ -1,8 +1,9 @@
 #!/usr/bin/env php
 <?php
 
+require_once "init.php";
 require_once __DIR__ ."/vendor/autoload.php";
-require_once __DIR__ ."/src/config.php";
+require_once __DIR__ ."/vendor/itnaida/itnaida/src/config.php";
 
 use Itnaida\Core\Engine;
 
@@ -10,9 +11,6 @@ if (php_sapi_name() !== 'cli') {
     exit("Este script deve ser executado no terminal.\n");
 }
 
-var_dump(class_exists('Itnaida\Commands\TestCommand'));
 
 
 Engine::run($argv);
-
-// ls -l src/Commands/TestCommand.php
