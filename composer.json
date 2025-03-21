@@ -15,5 +15,10 @@
     ],
     "license": "MIT",
     "require": {},
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "scripts": {
+        "post-install-cmd": [
+        "cp ./itnaida ../itnaida"
+    ]
+  }
 }
