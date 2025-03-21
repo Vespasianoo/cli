@@ -18,7 +18,7 @@
     "minimum-stability": "dev",
     "scripts": {
         "post-install-cmd": [
-        "cp ./itnaida ../itnaida"
-    ]
-  }
+            "cp ./vendor/itnaida/itnaida/itnaida ./itnaida"
+        ]
+    }
 }
