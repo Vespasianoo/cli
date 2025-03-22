@@ -16,12 +16,7 @@
     "license": "MIT",
     "require": {},
     "minimum-stability": "dev",
-    "scripts": {
-    "post-install-cmd": [
-        "cp ./vendor/itnaida/itnaida/itnaida ./itnaida"
-    ],
-    "post-update-cmd": [
-        "cp ./vendor/itnaida/itnaida/itnaida ./itnaida"
+    "bin": [
+        "bin/itnaida-init"
     ]
-}
 }
