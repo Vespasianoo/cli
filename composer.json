@@ -17,8 +17,11 @@
     "require": {},
     "minimum-stability": "dev",
     "scripts": {
-        "itnaida-init": [
-            "cp ./vendor/itnaida/itnaida/itnaida ./itnaida"
-        ]
-    }
+    "post-install-cmd": [
+        "cp ./vendor/itnaida/itnaida/itnaida ./itnaida"
+    ],
+    "post-update-cmd": [
+        "cp ./vendor/itnaida/itnaida/itnaida ./itnaida"
+    ]
+}
 }
