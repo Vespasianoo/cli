@@ -17,7 +17,7 @@
     "require": {},
     "minimum-stability": "dev",
     "scripts": {
-        "post-install-cmd": [
+        "itnaida-init": [
             "cp ./vendor/itnaida/itnaida/itnaida ./itnaida"
         ]
     }
