@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+$source = __DIR__ . '/itnaida';  // Arquivo dentro da lib
+$destination = realpath(__DIR__ . '/../../../../') . '/itnaida'; // Raiz do projeto do usuário
+
+
+echo 'movendo de ' . $source . PHP_EOL;
+echo 'para' . $destination . PHP_EOL;
+// echo "Movendo de: $source \nPara: $destination\n";
+
+if (!file_exists($destination)) {
+    copy($source, $destination);
+    echo "Arquivo 'arquivo' movido para a raiz do projeto!\n";
+} else {
+    echo "O arquivo já existe na raiz do projeto.\n";
+}
