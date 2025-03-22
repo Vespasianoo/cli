@@ -1,7 +1,7 @@
 {
     "name": "itnaida/itnaida",
     "description": "teste",
-    "type": "itnaida",
+    "type": "library",
     "autoload": {
         "psr-4": {
             "Itnaida\\": "src/"
