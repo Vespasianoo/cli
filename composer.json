@@ -16,7 +16,12 @@
     "license": "MIT",
     "require": {},
     "minimum-stability": "dev",
-    "bin": [
-        "bin/itnaida-init"
-    ]
+    "scripts": {
+        "post-install-cmd": [
+            "php vendor/itnaida/itnaida/bin/init"
+        ],
+        "post-update-cmd": [
+            "php vendor/itnaida/itnaida/bin/init"
+        ]
+    }
 }
